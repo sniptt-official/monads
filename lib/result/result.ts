@@ -145,6 +145,6 @@ export function isOk<T, E>(val: Result<T, E>): val is ResOk<T> {
   return val.isOk();
 }
 
-export function isErr<T, E>(val: Result<T, E>): val is ResErr<T, E> {
+export function isErr<T, E>(val: Result<T, E>): val is ResErr<never, E> {
   return val.isErr();
 }
